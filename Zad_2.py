@@ -1,6 +1,3 @@
-from ssl import HAS_NEVER_CHECK_COMMON_NAME
-
-
 class Library:
     def __init__(self, city, street, zip_code, open_hours, phone):
         self.city = city
@@ -26,11 +23,11 @@ class Employee:
         return f"Employee: {self.first_name} {self.last_name}, Hired: {self.hire_date}, Birth: {self.birth_date}, Address: {self.city}, {self.street}, {self.zip_code}, Phone_number: {self.phone}"
 
 class Student:
-    def __init__(self, name, surname):
-        self.name = name
-        self.surname = surname
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
     def __str__(self):
-        return f"Name: {self.name}, Surname: {self.surname}"
+        return f"Name: {self.first_name}, Surname: {self.last_name}"
 
 class Book:
     def __init__(self, library, publication_date, author_name, author_surname, number_of_pages):
@@ -40,16 +37,17 @@ class Book:
         self.author_surname = author_surname
         self.number_of_pages = number_of_pages
     def __str__(self):
-        return f"Boook from {self.library}, Published {self.publication_date} by: {self.author_name}, {self.author_surname}, Number of Pages: {self.number_of_pages} "
+        return f"Book from {self.library}, Published {self.publication_date} by: {self.author_name}, {self.author_surname}, Number of Pages: {self.number_of_pages} "
 
 class Order:
     def __init__(self, employee, student, books, order_date):
         self.employee = employee
         self.student = student
-        self.books = books
+        self.books = books #lista
         self.order_date = order_date
     def __str__(self):
-        return f"Employee: {self.employee}, Student: {self.student}, Books: {self.books}, Order Date: {self.order_date}"
+        books_str = ", ".join(str(book) for book in self.books)
+        return f"Employee: {self.employee}, Student: {self.student}, Books: {books_str}, Order Date: {self.order_date}"
 
 Library1 = Library("Kraków", "Starowiślna", "32-612", "8:00-16:00", "600-500-800")
 Library2 = Library("Kraków", "Wincentego Witosa", "32-612", "8:00-14:00", "600-300-811")
