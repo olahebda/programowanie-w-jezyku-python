@@ -24,4 +24,23 @@ def lista_liczb(liczby):
 liczby = [1, 2, 3, 4, 5]
 print(lista_liczb(liczby))
 
+# Zad 2.c.
+
+def lista_liczb2(liczby):
+    for liczba in liczby:
+        if liczba % 2 == 0:
+          print(liczba)
+
+liczby = list(range(10))
+lista_liczb2(liczby)
+
+#Zad 2.d.
+def lista_liczb3(liczby):
+    for liczba in range (0, len(liczby), 2):
+          print(liczby[liczba])
+
+liczby = list(range(10))
+lista_liczb3(liczby)
+
+
 
