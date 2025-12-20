@@ -38,10 +38,13 @@ class Brewery:
 
     def __str__(self):
         return (
-            f"Brewery(id={self.id}, name={self.name}, type={self.brewery_type}, "
+            f"Brewery(id={self.id}, name={self.name}, "
+            f"type={self.brewery_type}, "
             f"city={self.city}, state={self.state}, country={self.country}, "
-            f"address_1={self.address_1}, address_2={self.address_2}, address_3={self.address_3}, "
-            f"state_province={self.state_province}, postal_code={self.postal_code}, "
+            f"address_1={self.address_1}, address_2={self.address_2}, "
+            f"address_3={self.address_3}, "
+            f"state_province={self.state_province}, "
+            f"postal_code={self.postal_code}, "
             f"longitude={self.longitude}, latitude={self.latitude}, "
             f"phone={self.phone}, website_url={self.website_url})"
         )

@@ -39,7 +39,8 @@ class Brewery:
 
     def __str__(self):
         return (
-            f"{self.name} ({self.brewery_type}) - {self.city}, {self.state}, {self.country}"
+            f"{self.name} ({self.brewery_type}) -"
+            f" {self.city}, {self.state}, {self.country}"
         )
 
 
